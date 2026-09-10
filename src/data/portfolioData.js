@@ -202,6 +202,7 @@ export const portfolioData = {
       categoryLabel: "Programming",
       brand: "hackerrank",
       image: "/certificates/hackerrank-javascript.jpg",
+      pdf: "/certificates/HackerRank_JavaScript_Intermediate.pdf",
       link: "https://www.hackerrank.com/certificates/5167A3584846",
       date: "2024"
     },
@@ -213,7 +214,8 @@ export const portfolioData = {
       categoryLabel: "Programming",
       brand: "hackerrank",
       image: "/certificates/hackerrank-python.jpg",
-      link: "https://www.hackerrank.com/certificates/5DE00B33DC88",
+      pdf: "/certificates/HackerRank_Python_Basic.pdf",
+      link: "https://www.hackerrank.com/certificates/5DE0DB33DC8B",
       date: "2024"
     },
     {
