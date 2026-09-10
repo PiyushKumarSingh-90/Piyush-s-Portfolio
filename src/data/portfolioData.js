@@ -137,7 +137,6 @@ export const portfolioData = {
       category: "data-science",
       categoryLabel: "Data Science",
       brand: "cisco",
-      image: "/certificates/cisco-data-science.jpg",
       pdf: "/certificates/cisco-data-science.pdf",
       date: "Jul 2026"
     },
@@ -148,7 +147,6 @@ export const portfolioData = {
       category: "data-science",
       categoryLabel: "Data Science",
       brand: "deloitte",
-      image: "/certificates/deloitte-data-analytics.jpg",
       pdf: "/certificates/deloitte-data-analytics.pdf",
       date: "Jun 2026"
     },
@@ -159,7 +157,6 @@ export const portfolioData = {
       category: "ai-ml",
       categoryLabel: "AI / ML",
       brand: "infosys",
-      image: "/certificates/infosys-ai-foundation.jpg",
       pdf: "/certificates/infosys-ai-foundation.pdf",
       date: "2025"
     },
@@ -170,7 +167,6 @@ export const portfolioData = {
       category: "ai-ml",
       categoryLabel: "AI / ML",
       brand: "ibm",
-      image: "/certificates/ibm-generative-ai.jpg",
       pdf: "/certificates/ibm-generative-ai.pdf",
       link: "https://www.credly.com/go/foh1k0UM",
       date: "2025"
@@ -182,7 +178,6 @@ export const portfolioData = {
       category: "ai-ml",
       categoryLabel: "AI / ML",
       brand: "ibm",
-      image: "/certificates/ibm-agentic-ai.jpg",
       pdf: "/certificates/ibm-agentic-ai.pdf",
       link: "https://www.credly.com/go/zxiaELTj",
       date: "2025"
@@ -194,7 +189,7 @@ export const portfolioData = {
       category: "programming",
       categoryLabel: "Programming",
       brand: "techfest",
-      image: "/certificates/techfest-java.jpg",
+      image: "/certificates/IIT_Java.png",
       date: "2023"
     },
     {
@@ -204,7 +199,6 @@ export const portfolioData = {
       category: "programming",
       categoryLabel: "Programming",
       brand: "hackerrank",
-      image: "/certificates/hackerrank-javascript.jpg",
       pdf: "/certificates/hackerrank-javascript.pdf",
       link: "https://www.hackerrank.com/certificates/5167A3584846",
       date: "2024"
@@ -216,7 +210,6 @@ export const portfolioData = {
       category: "programming",
       categoryLabel: "Programming",
       brand: "hackerrank",
-      image: "/certificates/hackerrank-python.jpg",
       pdf: "/certificates/hackerrank-python.pdf",
       link: "https://www.hackerrank.com/certificates/5DE0DB33DC8B",
       date: "2024"
@@ -228,9 +221,8 @@ export const portfolioData = {
       category: "programming",
       categoryLabel: "Programming",
       brand: "hackerrank",
-      image: "/certificates/hackerrank-react.jpg",
       pdf: "/certificates/hackerrank-react.pdf",
-      link: "https://www.hackerrank.com/certificates/6BB88F111901",
+      link: "https://www.hackerrank.com/certificates/5167A3584846",
       date: "2024"
     }
   ],

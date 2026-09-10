@@ -509,7 +509,7 @@ const Certifications = () => {
                 <span>Verified Official Credential</span>
               </div>
               <div className="cert-modal-actions">
-                {selectedCert.pdf && (
+                {selectedCert.pdf ? (
                   <a
                     href={selectedCert.pdf}
                     download
@@ -517,7 +517,15 @@ const Certifications = () => {
                   >
                     <FiDownload size={14} /> Download PDF
                   </a>
-                )}
+                ) : selectedCert.image ? (
+                  <a
+                    href={selectedCert.image}
+                    download
+                    className="cert-modal-btn btn-secondary"
+                  >
+                    <FiDownload size={14} /> Download Image
+                  </a>
+                ) : null}
                 {selectedCert.link && (
                   <a
                     href={selectedCert.link}
