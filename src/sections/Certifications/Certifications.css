@@ -769,6 +769,16 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
+.cert-modal-iframe {
+  width: 100%;
+  height: 64vh;
+  min-height: 480px;
+  border: 1px solid rgba(214, 174, 98, 0.3);
+  border-radius: 6px;
+  background: #0d0c0a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
 .cert-modal-placeholder {
   display: flex;
   flex-direction: column;

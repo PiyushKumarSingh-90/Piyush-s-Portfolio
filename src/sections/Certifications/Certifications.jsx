@@ -480,9 +480,15 @@ const Certifications = () => {
               </button>
             </div>
 
-            {/* Modal Image Body */}
+            {/* Modal Image / PDF Body */}
             <div className="cert-modal-body">
-              {selectedCert.image ? (
+              {selectedCert.pdf ? (
+                <iframe
+                  src={`${selectedCert.pdf}#toolbar=0&navpanes=0&view=FitH`}
+                  title={selectedCert.title}
+                  className="cert-modal-iframe"
+                />
+              ) : selectedCert.image ? (
                 <img
                   src={selectedCert.image}
                   alt={selectedCert.title}
