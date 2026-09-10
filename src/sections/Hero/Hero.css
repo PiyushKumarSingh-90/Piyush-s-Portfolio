@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@1,400&family=Inter:wght@300&display=swap');
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+}
+
+.hero-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/new-hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+  padding: 64px 40px;
+}
+
+/* 1. EYEBROW TEXT */
+.hero-eyebrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.eyebrow-line {
+  width: 120px;
+  height: 1px;
+  background: #D6AE62;
+  opacity: 0.5;
+  display: inline-block;
+}
+
+.eyebrow-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.eyebrow-star {
+  font-size: 14px;
+  color: rgba(214, 174, 98, 0.7);
+  margin-bottom: 8px;
+}
+
+.eyebrow-text {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.6em;
+  color: rgba(214, 174, 98, 0.7);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* 2. MAIN NAME */
+.hero-name {
+  font-family: 'Harry P', 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(64px, 11vw, 140px);
+  font-weight: normal;
+  color: #E4C27A;
+  
+  /* Wizard/Academia text styling: text border (stroke) and drop shadows with a hint of rust */
+  -webkit-text-stroke: 1.5px #7a3e14; /* Deep rust letter border */
+  text-shadow: 
+    3px 3px 0px rgba(45, 20, 5, 0.9), /* Sharp rust/dark-brown shadow */
+    0 0 30px rgba(212, 175, 55, 0.4), /* Magical gold glow */
+    0 0 80px rgba(212, 175, 55, 0.15);
+  
+  letter-spacing: 0.03em;
+  margin: 0 0 16px 0;
+  line-height: 1.1;
+}
+
+/* 3. SUBTITLE LINE */
+.hero-subtitle-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.subtitle-rule {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.subtitle-line {
+  width: 60px;
+  height: 1px;
+  background: rgba(214, 174, 98, 0.4);
+}
+
+.subtitle-diamond {
+  font-size: 10px;
+  color: rgba(214, 174, 98, 0.4);
+}
+
+.hero-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(16px, 2.2vw, 26px);
+  font-style: italic;
+  color: rgba(240, 227, 194, 0.8);
+  letter-spacing: 0.08em;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* 4. TAGLINE */
+.hero-tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(14px, 1.4vw, 17px);
+  color: rgba(240, 227, 194, 0.55);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  margin: 24px 0 0 0;
+}
+
+/* 5. CTA BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.hero-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 16px 40px;
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  background: transparent;
+  
+  /* Creates the curved inward edges (ticket shape) */
+  mask-image: 
+    radial-gradient(circle at 0 0, transparent 12px, black 13px),
+    radial-gradient(circle at 100% 0, transparent 12px, black 13px),
+    radial-gradient(circle at 0 100%, transparent 12px, black 13px),
+    radial-gradient(circle at 100% 100%, transparent 12px, black 13px);
+  mask-position: top left, top right, bottom left, bottom right;
+  mask-size: 51% 51%;
+  mask-repeat: no-repeat;
+  
+  /* Fallback for Safari */
+  -webkit-mask-image: 
+    radial-gradient(circle at 0 0, transparent 12px, black 13px),
+    radial-gradient(circle at 100% 0, transparent 12px, black 13px),
+    radial-gradient(circle at 0 100%, transparent 12px, black 13px),
+    radial-gradient(circle at 100% 100%, transparent 12px, black 13px);
+  -webkit-mask-position: top left, top right, bottom left, bottom right;
+  -webkit-mask-size: 51% 51%;
+  -webkit-mask-repeat: no-repeat;
+}
+
+/* Extra inner magical outline */
+.hero-btn::after {
+  content: '';
+  position: absolute;
+  top: 4px; left: 4px; right: 4px; bottom: 4px;
+  border: 1px solid rgba(60, 30, 15, 0.7); /* Darker interior line */
+  pointer-events: none;
+  
+  /* Matching inner mask */
+  -webkit-mask-image: 
+    radial-gradient(circle at 0 0, transparent 8px, black 9px),
+    radial-gradient(circle at 100% 0, transparent 8px, black 9px),
+    radial-gradient(circle at 0 100%, transparent 8px, black 9px),
+    radial-gradient(circle at 100% 100%, transparent 8px, black 9px);
+  -webkit-mask-position: top left, top right, bottom left, bottom right;
+  -webkit-mask-size: 51% 51%;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #D6AE62 0%, #E4C27A 40%, #bf953f 100%);
+  color: #2b1605;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 0 0 2px rgba(60, 30, 15, 0.6); /* Darker outer border */
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 10px 15px rgba(214, 174, 98, 0.4));
+  color: #1a0d02;
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, rgba(30, 20, 15, 0.9) 0%, rgba(15, 10, 8, 0.95) 100%);
+  color: #D6AE62;
+  box-shadow: inset 0 0 0 2px rgba(90, 46, 20, 0.8); /* Darker border */
+}
+
+.btn-secondary::after {
+  border-color: rgba(90, 46, 20, 0.6); /* Darker interior line */
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, rgba(45, 30, 20, 0.9) 0%, rgba(20, 15, 10, 0.95) 100%);
+  box-shadow: inset 0 0 0 2px #7a3e14;
+  color: #E4C27A;
+  transform: translateY(-2px);
+}
+
+/* 6. SOCIAL ICONS */
+.hero-socials {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.social-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(214, 174, 98, 0.35);
+  border-radius: 50%;
+  background: rgba(16, 16, 24, 0.4);
+  color: rgba(214, 174, 98, 0.7);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  border-color: #D6AE62;
+  background: rgba(214, 174, 98, 0.1);
+  color: #D6AE62;
+}
+
+.social-separator {
+  color: rgba(214, 174, 98, 0.3);
+  font-size: 14px;
+  pointer-events: none;
+}
+
+/* 7. SCROLL INDICATOR */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.scroll-text {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 0.4em;
+  color: rgba(214, 174, 98, 0.5);
+  margin-bottom: 12px;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(214, 174, 98, 0.5) 0%, transparent 100%);
+  background-size: 100% 200%;
+  animation: shimmer 2s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% -100%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .subtitle-rule {
+    display: none;
+  }
+}

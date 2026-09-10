@@ -1,0 +1,35 @@
+:root {
+  /* Typography */
+  --font-serif: 'Cinzel', 'Playfair Display', serif;
+  --font-sans: 'Inter', 'Poppins', sans-serif;
+
+  /* Color Palette based on specs */
+  /* Background Navy/Black tones */
+  --bg-dark-1: #050A0F;
+  --bg-dark-2: #07111C;
+  --bg-dark-3: #0B1724;
+
+  /* Gold & Ivory */
+  --color-gold-bright: #E4C27A;
+  --color-gold: #D6AE62;
+  --color-gold-muted: #C99A45;
+  --color-gold-dark: #A78752;
+  --color-warm-ivory: #F0E3C2;
+  
+  /* Overlays */
+  --glass-dark: rgba(5, 10, 15, 0.65);
+  --glass-darker: rgba(5, 10, 15, 0.85);
+
+  /* Legacy mappings to keep the rest of the app functional for now */
+  --color-near-black: var(--bg-dark-1);
+  --color-antique-gold: var(--color-gold);
+  --color-warm-parchment: var(--color-warm-ivory);
+  --color-soft-gold: var(--color-gold-bright);
+  --color-warm-white: #ffffff;
+  --color-muted-text: #a0aab5;
+
+  /* Magical Glows */
+  --glow-gold: 0 0 15px rgba(214, 174, 98, 0.3), 0 0 30px rgba(214, 174, 98, 0.1);
+  --glow-gold-intense: 0 0 20px rgba(214, 174, 98, 0.6), 0 0 40px rgba(214, 174, 98, 0.4);
+  --glow-text: 0 0 10px rgba(228, 194, 122, 0.4);
+}

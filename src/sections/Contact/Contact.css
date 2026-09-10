@@ -1,0 +1,901 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+
+/* ===================================================
+   CONTACT SECTION — DARK ACADEMIA GOTHIC DESIGN
+   =================================================== */
+
+.contact-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #000000;
+  box-sizing: border-box;
+}
+
+/* ─── Background Layer: Preserves Gothic Library Composition ─── */
+.contact-bg-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.contact-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: brightness(0.9) contrast(1.04);
+}
+
+.contact-atmosphere-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(0, 0, 0, 0.26) 65%,
+    rgba(0, 0, 0, 0.62) 100%
+  );
+  pointer-events: none;
+}
+
+/* ─── Main Container ─── */
+.contact-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 92px 0 32px;
+  box-sizing: border-box;
+}
+
+/* ─── Content Area: Centered in Open Zone, Leaving Elements Clear ─── */
+.contact-content-area {
+  width: min(60vw, 1060px);
+  margin-left: max(23.5vw, 360px);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* ─── Upper Intro & Quote Zone ─── */
+.contact-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.contact-intro {
+  text-align: left;
+  max-width: 530px;
+}
+
+.contact-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  color: #dfb66e;
+  text-transform: uppercase;
+  display: block;
+  line-height: 1;
+  text-shadow: 0 0 14px rgba(214, 174, 98, 0.5), 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.contact-eyebrow-adornment {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0 10px;
+}
+
+.contact-eyebrow-adornment .eyebrow-line {
+  width: 44px;
+  height: 1px;
+  background: linear-gradient(90deg, #d8b266, transparent);
+  box-shadow: 0 0 6px rgba(216, 178, 102, 0.35);
+}
+
+.contact-eyebrow-adornment .eyebrow-star {
+  font-size: 11px;
+  color: #e5bf73;
+  line-height: 1;
+  text-shadow: 0 0 8px rgba(229, 191, 115, 0.8);
+}
+
+.contact-main-heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(48px, 3.6vw, 62px);
+  font-weight: 500;
+  line-height: 0.98;
+  color: #f7edd8;
+  margin: 0 0 10px 0;
+  text-shadow: 0 0 20px rgba(214, 174, 98, 0.35), 0 3px 6px rgba(0, 0, 0, 0.95);
+  letter-spacing: -0.01em;
+}
+
+.contact-intro-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16.5px;
+  line-height: 1.45;
+  color: rgba(235, 222, 196, 0.88);
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  max-width: 500px;
+}
+
+/* ─── Upper Right Quote Block ─── */
+.contact-quote-block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-right: 36px;
+  flex-shrink: 0;
+}
+
+.quote-divider-vertical {
+  width: 1px;
+  height: 76px;
+  background: linear-gradient(180deg, transparent, rgba(214, 174, 98, 0.65) 20%, rgba(214, 174, 98, 0.65) 80%, transparent);
+}
+
+.quote-text-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.quote-phrase {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.35;
+  color: #dfb66e;
+  margin: 0 0 6px 0;
+  text-shadow: 0 0 12px rgba(214, 174, 98, 0.35);
+}
+
+.quote-bottom-adornment {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quote-bottom-adornment .quote-line {
+  width: 28px;
+  height: 1px;
+  background: rgba(214, 174, 98, 0.5);
+}
+
+.quote-bottom-adornment .quote-star {
+  font-size: 9px;
+  color: #e5bf73;
+}
+
+/* ─── Main Two-Column Contact Area ─── */
+.contact-main-grid {
+  display: grid;
+  grid-template-columns: 0.65fr 1.95fr;
+  gap: 22px;
+  align-items: stretch;
+  margin-bottom: 20px;
+}
+
+/* ─── Left Column: Contact Cards ─── */
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: space-between;
+}
+
+.contact-info-card-outer {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding: 1px;
+  background: rgba(208, 160, 75, 0.6);
+  clip-path: polygon(
+    11px 0,
+    calc(100% - 11px) 0,
+    calc(100% - 11px) 2px,
+    calc(100% - 2px) 11px,
+    100% 11px,
+    100% calc(100% - 11px),
+    calc(100% - 2px) calc(100% - 11px),
+    calc(100% - 11px) calc(100% - 2px),
+    calc(100% - 11px) 100%,
+    11px 100%,
+    11px calc(100% - 2px),
+    2px calc(100% - 11px),
+    0 calc(100% - 11px),
+    0 11px,
+    2px 11px,
+    11px 2px
+  );
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.85);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.28s ease,
+              box-shadow 0.28s ease;
+  text-decoration: none;
+  display: block;
+}
+
+.contact-info-card-outer:hover {
+  transform: translateY(-2px);
+  background: rgba(224, 177, 89, 0.95);
+  box-shadow: 
+    0 10px 28px rgba(0, 0, 0, 0.95),
+    0 0 16px rgba(214, 174, 98, 0.25);
+}
+
+.contact-info-card-inner {
+  width: 100%;
+  box-sizing: border-box;
+  background: #000000;
+  clip-path: polygon(
+    10.5px 0,
+    calc(100% - 10.5px) 0,
+    calc(100% - 10.5px) 1.5px,
+    calc(100% - 1.5px) 10.5px,
+    100% 10.5px,
+    100% calc(100% - 10.5px),
+    calc(100% - 1.5px) calc(100% - 10.5px),
+    calc(100% - 10.5px) calc(100% - 1.5px),
+    calc(100% - 10.5px) 100%,
+    10.5px 100%,
+    10.5px calc(100% - 1.5px),
+    1.5px calc(100% - 10.5px),
+    0 calc(100% - 10.5px),
+    0 10.5px,
+    1.5px 10.5px,
+    10.5px 1.5px
+  );
+  padding: 23px 14px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 94px;
+}
+
+.contact-info-icon-box {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dfb66e;
+  font-size: 20px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 8px rgba(223, 182, 110, 0.45));
+}
+
+.contact-info-divider {
+  width: 1px;
+  height: 48px;
+  background: rgba(214, 174, 98, 0.28);
+  flex-shrink: 0;
+}
+
+.contact-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+}
+
+.info-card-label {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #dfb66e;
+  text-transform: none;
+  line-height: 1.1;
+}
+
+.info-card-value {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12.8px;
+  font-weight: 500;
+  color: #f7edd8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.info-card-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 12px;
+  color: rgba(214, 174, 98, 0.72);
+}
+
+/* ─── Right Column: Send Message Form ─── */
+.contact-form-outer {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding: 1px;
+  background: rgba(208, 160, 75, 0.6);
+  clip-path: polygon(
+    13px 0,
+    calc(100% - 13px) 0,
+    calc(100% - 13px) 2px,
+    calc(100% - 2px) 13px,
+    100% 13px,
+    100% calc(100% - 13px),
+    calc(100% - 2px) calc(100% - 13px),
+    calc(100% - 13px) calc(100% - 2px),
+    calc(100% - 13px) 100%,
+    13px 100%,
+    13px calc(100% - 2px),
+    2px calc(100% - 13px),
+    0 calc(100% - 13px),
+    0 13px,
+    2px 13px,
+    13px 2px
+  );
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.88);
+}
+
+.contact-form-inner {
+  width: 100%;
+  box-sizing: border-box;
+  background: #000000;
+  clip-path: polygon(
+    12.5px 0,
+    calc(100% - 12.5px) 0,
+    calc(100% - 12.5px) 1.5px,
+    calc(100% - 1.5px) 12.5px,
+    100% 12.5px,
+    100% calc(100% - 12.5px),
+    calc(100% - 1.5px) calc(100% - 12.5px),
+    calc(100% - 12.5px) calc(100% - 1.5px),
+    calc(100% - 12.5px) 100%,
+    12.5px 100%,
+    12.5px calc(100% - 1.5px),
+    1.5px calc(100% - 12.5px),
+    0 calc(100% - 12.5px),
+    0 12.5px,
+    1.5px 12.5px,
+    12.5px 1.5px
+  );
+  padding: 16px 20px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.contact-form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.form-header-left {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.form-header-icon {
+  font-size: 16px;
+  color: #dfb66e;
+}
+
+.form-header-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #f7edd8;
+  text-transform: none;
+}
+
+.form-header-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: rgba(214, 174, 98, 0.8);
+}
+
+/* ─── Form Elements ─── */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-row-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-field-wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field-wrap.full-width {
+  width: 100%;
+}
+
+.field-icon {
+  position: absolute;
+  left: 12px;
+  top: 17px;
+  transform: translateY(-50%);
+  color: rgba(214, 174, 98, 0.65);
+  font-size: 14px;
+  pointer-events: none;
+  z-index: 2;
+  transition: color 0.2s ease;
+}
+
+.field-icon.textarea-icon {
+  top: 13px;
+  transform: none;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: #080b0f;
+  border: 1px solid rgba(173, 132, 65, 0.45);
+  color: #f7edd8;
+  font-size: 13.5px;
+  font-family: inherit;
+  padding: 8px 12px 8px 34px;
+  outline: none;
+  border-radius: 3px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 14.5px;
+  color: rgba(235, 222, 196, 0.5);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  background: rgba(6, 12, 18, 0.88);
+  border-color: rgba(224, 177, 89, 0.95);
+  box-shadow: 0 0 10px rgba(224, 177, 89, 0.12);
+}
+
+.form-field-wrap:focus-within .field-icon {
+  color: #dfb66e;
+}
+
+.form-textarea {
+  resize: none;
+  min-height: 84px;
+  padding-top: 9px;
+  line-height: 1.4;
+}
+
+.form-field-wrap.has-error .form-input,
+.form-field-wrap.has-error .form-textarea {
+  border-color: rgba(220, 80, 80, 0.85);
+  background: rgba(40, 10, 10, 0.4);
+}
+
+.field-error-msg {
+  font-family: inherit;
+  font-size: 10.5px;
+  color: #ff9e94;
+  margin-top: 2px;
+  padding-left: 4px;
+}
+
+/* ─── Form Footer & Submit Button ─── */
+.form-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 2px;
+}
+
+.form-status-badge {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 2px;
+  margin-right: auto;
+}
+
+.form-status-badge.success {
+  background: rgba(30, 80, 45, 0.5);
+  border: 1px solid rgba(80, 190, 110, 0.6);
+  color: #bbf7d0;
+}
+
+.form-status-badge.error {
+  background: rgba(80, 20, 20, 0.6);
+  border: 1px solid rgba(220, 80, 80, 0.6);
+  color: #fca5a5;
+}
+
+.btn-spinner {
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(241, 213, 155, 0.3);
+  border-top-color: #f1d59b;
+  border-radius: 50%;
+  animation: btnSpinnerRotate 0.8s linear infinite;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+@keyframes btnSpinnerRotate {
+  to { transform: rotate(360deg); }
+}
+
+.contact-honeypot {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.btn-send-message {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 18px;
+  background: #000000;
+  border: 1px solid rgba(214, 174, 98, 0.75);
+  color: #f1d59b;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 14.5px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-send-message:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: rgba(214, 174, 98, 0.15);
+  border-color: #f1d59b;
+  box-shadow: 0 0 14px rgba(214, 174, 98, 0.3);
+}
+
+.btn-send-message:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-send-icon {
+  font-size: 13px;
+  color: #dfb66e;
+}
+
+.btn-arrow-icon {
+  font-size: 12px;
+  color: #dfb66e;
+}
+
+/* ─── Find Me Online Section ─── */
+.find-online-section {
+  width: 100%;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.find-online-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.find-online-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 16.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #dfb66e;
+  text-transform: none;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(214, 174, 98, 0.4);
+}
+
+.find-line {
+  width: 55px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(214, 174, 98, 0.6), transparent);
+}
+
+.find-online-sub-ornament {
+  margin: 2px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.find-star {
+  font-size: 10px;
+  color: #e5bf73;
+  line-height: 1;
+}
+
+/* ─── Social Cards Row ─── */
+.social-cards-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.social-card-outer {
+  position: relative;
+  box-sizing: border-box;
+  padding: 1px;
+  background: rgba(208, 160, 75, 0.55);
+  clip-path: polygon(
+    9px 0,
+    calc(100% - 9px) 0,
+    calc(100% - 9px) 1.8px,
+    calc(100% - 1.8px) 9px,
+    100% 9px,
+    100% calc(100% - 9px),
+    calc(100% - 1.8px) calc(100% - 9px),
+    calc(100% - 9px) calc(100% - 1.8px),
+    calc(100% - 9px) 100%,
+    9px 100%,
+    9px calc(100% - 1.8px),
+    1.8px calc(100% - 9px),
+    0 calc(100% - 9px),
+    0 9px,
+    1.8px 9px,
+    9px 1.8px
+  );
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.85);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.28s ease,
+              box-shadow 0.28s ease;
+  text-decoration: none;
+  display: block;
+}
+
+.social-card-outer:hover {
+  transform: translateY(-3px);
+  background: rgba(224, 177, 89, 0.95);
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.95),
+    0 0 16px rgba(214, 174, 98, 0.28);
+}
+
+.social-card-inner {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  background: #000000;
+  clip-path: polygon(
+    8.5px 0,
+    calc(100% - 8.5px) 0,
+    calc(100% - 8.5px) 1.4px,
+    calc(100% - 1.4px) 8.5px,
+    100% 8.5px,
+    100% calc(100% - 8.5px),
+    calc(100% - 1.4px) calc(100% - 8.5px),
+    calc(100% - 8.5px) calc(100% - 1.4px),
+    calc(100% - 8.5px) 100%,
+    8.5px 100%,
+    8.5px calc(100% - 1.4px),
+    1.4px calc(100% - 8.5px),
+    0 calc(100% - 8.5px),
+    0 8.5px,
+    1.4px 8.5px,
+    8.5px 1.4px
+  );
+  padding: 13px 8px 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.social-ext-icon {
+  position: absolute;
+  top: 6px;
+  right: 7px;
+  font-size: 11px;
+  color: rgba(214, 174, 98, 0.55);
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.social-card-outer:hover .social-ext-icon {
+  color: #f1d59b;
+  transform: translate(1px, -1px);
+}
+
+.social-logo-box {
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+  transition: transform 0.25s ease;
+}
+
+.social-card-outer:hover .social-logo-box {
+  transform: scale(1.06);
+}
+
+.linkedin-custom-badge {
+  background: #0a66c2;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 3px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.github-svg {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.leetcode-svg {
+  font-size: 21px;
+  color: #ffa116;
+}
+
+.codechef-svg {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.social-card-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #f7edd8;
+  margin-bottom: 2px;
+  text-transform: none;
+}
+
+.social-card-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 11.5px;
+  color: rgba(214, 174, 98, 0.72);
+}
+
+/* ─── Bottom Divider & Closing Motto ─── */
+.contact-bottom-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 16px 0 8px;
+}
+
+.bottom-line {
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(214, 174, 98, 0.6), transparent);
+}
+
+.bottom-star {
+  font-size: 9px;
+  color: #e5bf73;
+}
+
+.contact-closing-phrase {
+  font-family: 'Cinzel', serif;
+  font-size: 9.5px;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  color: rgba(214, 174, 98, 0.85);
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(214, 174, 98, 0.3);
+}
+
+/* ===================================================
+   RESPONSIVE BREAKPOINTS
+   =================================================== */
+
+@media (max-width: 1280px) {
+  .contact-content-area {
+    width: min(62vw, 960px);
+    margin-left: max(22vw, 320px);
+  }
+}
+
+@media (max-width: 1080px) {
+  .contact-content-area {
+    width: 88%;
+    margin: 0 auto;
+  }
+  .contact-top-row {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .contact-quote-block {
+    padding-top: 0;
+  }
+  .contact-main-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .social-cards-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-container {
+    padding: 85px 16px 28px;
+  }
+  .contact-content-area {
+    width: 100%;
+    margin: 0;
+  }
+  .contact-main-heading {
+    font-size: 28px;
+  }
+  .form-row-two-col {
+    grid-template-columns: 1fr;
+  }
+  .social-cards-row {
+    grid-template-columns: 1fr;
+  }
+}

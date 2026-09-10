@@ -1,0 +1,893 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+
+/* ===================================================
+   CERTIFICATES SECTION — DARK ACADEMIA GOTHIC DESIGN
+   =================================================== */
+
+.certs-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #000000;
+  box-sizing: border-box;
+}
+
+/* ─── Background Layer: Preserves Gothic Library Composition ─── */
+.certs-bg-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.certs-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: brightness(0.85) contrast(1.05);
+}
+
+.certs-atmosphere-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 48% 50%,
+    rgba(0, 0, 0, 0.20) 0%,
+    rgba(0, 0, 0, 0.42) 60%,
+    rgba(0, 0, 0, 0.72) 100%
+  );
+  pointer-events: none;
+}
+
+/* ─── Main Container ─── */
+.certs-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 114px 0 38px;
+  box-sizing: border-box;
+}
+
+/* ─── Content Area: Centered Slightly to Left in Open Zone ─── */
+.certs-content-area {
+  width: min(60vw, 1040px);
+  margin-left: max(19vw, 300px);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* ─── Upper Intro & Quote Zone ─── */
+.certs-top-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.certs-intro {
+  text-align: left;
+  max-width: 580px;
+}
+
+.certs-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 17.5px;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  color: #dfb66e;
+  text-transform: uppercase;
+  display: block;
+  line-height: 1;
+  text-shadow: 0 0 14px rgba(214, 174, 98, 0.5), 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.certs-eyebrow-adornment {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  margin: 8px 0 13px;
+}
+
+.certs-eyebrow-adornment .eyebrow-line {
+  width: 52px;
+  height: 1.5px;
+  background: linear-gradient(90deg, #d8b266, transparent);
+  box-shadow: 0 0 6px rgba(216, 178, 102, 0.35);
+}
+
+.certs-eyebrow-adornment .eyebrow-line:first-child {
+  background: linear-gradient(90deg, transparent, #d8b266);
+}
+
+.certs-eyebrow-adornment .eyebrow-star {
+  font-size: 15px;
+  color: #fff2c6;
+  line-height: 1;
+  text-shadow: 0 0 10px rgba(255, 230, 150, 0.95), 0 0 20px rgba(214, 174, 98, 0.55);
+}
+
+.certs-heading {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(24px, 2.2vw, 32px);
+  font-weight: 600;
+  color: #f1cf8a;
+  background: linear-gradient(135deg, #fce5b2 0%, #dfb56c 45%, #c89842 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.18;
+  margin: 0 0 8px;
+  letter-spacing: 0.02em;
+  filter: drop-shadow(0 0 16px rgba(214, 174, 98, 0.4));
+}
+
+.certs-subtitle {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: clamp(12px, 0.92vw, 13.5px);
+  font-weight: 400;
+  color: rgba(240, 227, 194, 0.75);
+  line-height: 1.45;
+  margin: 0;
+  max-width: 540px;
+}
+
+/* ─── Framing Divider ─── */
+.certs-divider-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-right: 18px;
+  opacity: 0.55;
+}
+
+.certs-v-line {
+  width: 1px;
+  height: 85px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(214, 174, 98, 0.45) 25%,
+    rgba(214, 174, 98, 0.45) 75%,
+    transparent
+  );
+}
+
+/* ─── Upper Right Quote Zone ─── */
+.certs-quote-zone {
+  text-align: right;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.certs-quote-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(16px, 1.3vw, 18.5px);
+  font-weight: 600;
+  color: #ebd090;
+  line-height: 1.28;
+  margin: 0 0 8px;
+  text-shadow: 0 0 12px rgba(214, 174, 98, 0.4);
+}
+
+.certs-quote-adornment {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.certs-quote-adornment .quote-star-line {
+  width: 44px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(214, 174, 98, 0.5));
+}
+
+.certs-quote-adornment .quote-star-line:last-child {
+  background: linear-gradient(90deg, rgba(214, 174, 98, 0.5), transparent);
+}
+
+.certs-quote-adornment .quote-star {
+  font-size: 13px;
+  color: #f7edd8;
+  text-shadow: 0 0 8px rgba(253, 232, 170, 0.85);
+}
+
+/* ─── Filter Pills Bar ─── */
+.certs-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.certs-filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6.5px 16px;
+  border-radius: 9999px;
+  background: rgba(12, 10, 8, 0.85);
+  border: 1px solid rgba(214, 174, 98, 0.32);
+  color: rgba(240, 227, 194, 0.8);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.certs-filter-pill .filter-pill-icon {
+  color: #dfb66e;
+  transition: transform 0.2s ease;
+}
+
+.certs-filter-pill:hover {
+  border-color: rgba(214, 174, 98, 0.65);
+  background: rgba(24, 18, 12, 0.92);
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(214, 174, 98, 0.25);
+}
+
+.certs-filter-pill:hover .filter-pill-icon {
+  transform: scale(1.1);
+}
+
+.certs-filter-pill.active {
+  border-color: #d4af37;
+  background: rgba(32, 24, 14, 0.95);
+  color: #ffd984;
+  box-shadow: 0 0 16px rgba(214, 174, 98, 0.45);
+}
+
+.certs-filter-pill.active .filter-pill-icon {
+  color: #ffe090;
+}
+
+/* ─── 3x3 Certificates Grid ─── */
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.cert-card-outer {
+  position: relative;
+  box-sizing: border-box;
+  padding: 1px;
+  background: rgba(208, 160, 75, 0.55);
+  clip-path: polygon(
+    11px 0,
+    calc(100% - 11px) 0,
+    calc(100% - 11px) 2px,
+    calc(100% - 2px) 11px,
+    100% 11px,
+    100% calc(100% - 11px),
+    calc(100% - 2px) calc(100% - 11px),
+    calc(100% - 11px) calc(100% - 2px),
+    calc(100% - 11px) 100%,
+    11px 100%,
+    11px calc(100% - 2px),
+    2px calc(100% - 11px),
+    0 calc(100% - 11px),
+    0 11px,
+    2px 11px,
+    11px 2px
+  );
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.28s ease,
+              box-shadow 0.28s ease;
+  text-decoration: none;
+  display: flex;
+}
+
+.cert-card-outer:hover {
+  transform: translateY(-2px);
+  background: rgba(224, 177, 89, 0.95);
+  box-shadow: 
+    0 10px 28px rgba(0, 0, 0, 0.95),
+    0 0 16px rgba(214, 174, 98, 0.3);
+}
+
+.cert-card-inner {
+  width: 100%;
+  box-sizing: border-box;
+  background: #000000;
+  clip-path: polygon(
+    10.5px 0,
+    calc(100% - 10.5px) 0,
+    calc(100% - 10.5px) 1.5px,
+    calc(100% - 1.5px) 10.5px,
+    100% 10.5px,
+    100% calc(100% - 10.5px),
+    calc(100% - 1.5px) calc(100% - 10.5px),
+    calc(100% - 10.5px) calc(100% - 1.5px),
+    calc(100% - 10.5px) 100%,
+    10.5px 100%,
+    10.5px calc(100% - 1.5px),
+    1.5px calc(100% - 10.5px),
+    0 calc(100% - 10.5px),
+    0 10.5px,
+    1.5px 10.5px,
+    10.5px 1.5px
+  );
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+  min-height: 94px;
+}
+
+.cert-card-corner-arrow {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  color: rgba(214, 174, 98, 0.45);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.cert-card-outer:hover .cert-card-corner-arrow {
+  color: #f0c878;
+  transform: translate(1px, -1px);
+}
+
+.cert-card-left {
+  width: 70px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-card-right {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cert-card-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #f2ebd9;
+  line-height: 1.25;
+  margin: 0 0 3px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cert-card-issuer {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: rgba(214, 196, 160, 0.7);
+  margin: 0 0 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cert-card-tag-row {
+  display: flex;
+  align-items: center;
+}
+
+.cert-card-tag {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 9999px;
+  font-size: 10px;
+  font-weight: 500;
+  border: 1px solid rgba(214, 174, 98, 0.3);
+  background: rgba(20, 16, 12, 0.6);
+  color: #d6af62;
+  letter-spacing: 0.02em;
+}
+
+/* ─── Specific Brand Logo Styles ─── */
+.brand-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deloitte-wordmark {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.deloitte-dot {
+  color: #86bc25;
+}
+
+.hackerrank-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.hackerrank-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.leetcode-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.leetcode-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* ─── Techfest Lockup ─── */
+.techfest-lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.techfest-text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+}
+
+.techfest-wordmark {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-style: italic;
+  font-size: 11px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.techfest-tm {
+  font-size: 7px;
+  margin-left: 1px;
+}
+
+.techfest-submark {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 5.5px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.14em;
+  margin-top: 1.5px;
+}
+
+/* ─── CodeChef Lockup ─── */
+.codechef-lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.codechef-text-group {
+  display: flex;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.codechef-code {
+  color: #ffffff;
+}
+
+.codechef-chef {
+  color: #e89f4c;
+}
+
+/* ─── Infosys Lockup ─── */
+.infosys-lockup {
+  display: inline-flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.infosys-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #007cc3;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.infosys-reg {
+  font-size: 8px;
+  color: #007cc3;
+  margin-left: 2px;
+  margin-top: -2px;
+}
+
+/* ─── Achievements Row (2 Wider Cards) ─── */
+.certs-achievements-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.achievement-card {
+  min-height: 94px;
+}
+
+.achievement-tag {
+  color: #ffd984;
+  border-color: rgba(229, 191, 115, 0.4);
+}
+
+/* ─── Bottom Stats Row ─── */
+.certs-stats-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  padding: 12px 24px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 14px;
+}
+
+.certs-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.certs-stat-icon {
+  color: #dfb66e;
+}
+
+.certs-stat-text {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.certs-stat-number {
+  font-family: 'Cinzel', serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: #f1cf8a;
+  text-shadow: 0 0 10px rgba(214, 174, 98, 0.45);
+}
+
+.certs-stat-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12px;
+  color: rgba(240, 227, 194, 0.75);
+}
+
+.certs-stat-divider {
+  width: 1px;
+  height: 28px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(214, 174, 98, 0.45),
+    transparent
+  );
+}
+
+/* ─── Bottom Closing Motto ─── */
+.certs-footer-quote {
+  text-align: center;
+  width: 100%;
+}
+
+.certs-footer-star {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 6px;
+}
+
+.certs-footer-star .footer-star-line {
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(214, 174, 98, 0.5));
+}
+
+.certs-footer-star .footer-star-line:last-child {
+  background: linear-gradient(90deg, rgba(214, 174, 98, 0.5), transparent);
+}
+
+.certs-footer-star .footer-star {
+  font-size: 13px;
+  color: #f7edd8;
+  text-shadow: 0 0 8px rgba(253, 232, 170, 0.85);
+}
+
+.certs-footer-text {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  color: rgba(214, 174, 98, 0.75);
+  margin: 0;
+}
+
+/* ===================================================
+   MODAL / POPUP STYLES
+   =================================================== */
+
+.cert-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(4, 3, 2, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: modalFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cert-modal-dialog {
+  position: relative;
+  width: 100%;
+  max-width: 820px;
+  max-height: 90vh;
+  background: #080705;
+  border: 1px solid rgba(214, 174, 98, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85), 0 0 30px rgba(214, 174, 98, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalScaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cert-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 18px 24px;
+  border-bottom: 1px solid rgba(214, 174, 98, 0.2);
+  background: rgba(18, 14, 10, 0.85);
+}
+
+.cert-modal-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 500;
+  border: 1px solid rgba(214, 174, 98, 0.35);
+  background: rgba(30, 22, 14, 0.8);
+  color: #dfb66e;
+  margin-bottom: 6px;
+}
+
+.cert-modal-title {
+  font-family: 'Cinzel', serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: #f7edd8;
+  margin: 0 0 4px;
+  line-height: 1.25;
+}
+
+.cert-modal-subtitle {
+  font-size: 12.5px;
+  color: rgba(240, 227, 194, 0.7);
+  margin: 0;
+}
+
+.gold-text {
+  color: #dfb66e;
+}
+
+.cert-modal-close-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(214, 174, 98, 0.3);
+  color: #dfb66e;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+.cert-modal-close-btn:hover {
+  background: rgba(214, 174, 98, 0.2);
+  border-color: #dfb66e;
+  color: #ffffff;
+  transform: rotate(90deg);
+}
+
+.cert-modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, rgba(20, 16, 12, 0.6) 0%, #060504 100%);
+}
+
+.cert-modal-img {
+  max-width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 1px solid rgba(214, 174, 98, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.cert-modal-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: rgba(214, 174, 98, 0.5);
+  padding: 60px 0;
+}
+
+.cert-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  border-top: 1px solid rgba(214, 174, 98, 0.2);
+  background: rgba(14, 11, 8, 0.9);
+}
+
+.cert-modal-meta {
+  font-size: 11.5px;
+  color: rgba(214, 174, 98, 0.65);
+  letter-spacing: 0.04em;
+}
+
+.cert-modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cert-modal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.cert-modal-btn.btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(214, 174, 98, 0.35);
+  color: #f7edd8;
+}
+
+.cert-modal-btn.btn-secondary:hover {
+  background: rgba(214, 174, 98, 0.15);
+  border-color: #dfb66e;
+  color: #ffffff;
+}
+
+.cert-modal-btn.btn-primary {
+  background: linear-gradient(135deg, #dfb66e 0%, #b88b3a 100%);
+  border: 1px solid #dfb66e;
+  color: #000000;
+  font-weight: 600;
+}
+
+.cert-modal-btn.btn-primary:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 0 12px rgba(214, 174, 98, 0.4);
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalScaleUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ─── Responsive adjustments ─── */
+@media (max-width: 1200px) {
+  .certs-content-area {
+    width: 72vw;
+    margin-left: 14vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .certs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .certs-content-area {
+    width: 86vw;
+    margin-left: 7vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .certs-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .certs-divider-zone {
+    display: none;
+  }
+  .certs-quote-zone {
+    text-align: left;
+    align-items: flex-start;
+  }
+  .certs-grid {
+    grid-template-columns: 1fr;
+  }
+  .certs-achievements-row {
+    grid-template-columns: 1fr;
+  }
+  .certs-stats-strip {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .certs-stat-divider {
+    display: none;
+  }
+}

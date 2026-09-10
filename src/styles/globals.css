@@ -1,0 +1,80 @@
+@import './variables.css';
+@import './typography.css';
+@import './animations.css';
+
+@font-face {
+  font-family: 'Harry P';
+  src: url('/fonts/harryp.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: var(--color-near-black);
+  color: var(--color-warm-white);
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+body {
+  background-color: var(--color-near-black);
+  background-image: var(--bg-gradient-magic), url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: rgba(16, 16, 24, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 163, 91, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  color: var(--color-warm-parchment);
+}
+
+a {
+  color: var(--color-soft-gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-antique-gold);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: none; /* We will use a custom cursor */
+}
+
+/* Base layout utility */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hide default cursor on desktop */
+@media (pointer: fine) {
+  * { cursor: none !important; }
+  a, button, [role="button"] { cursor: none !important; }
+}
